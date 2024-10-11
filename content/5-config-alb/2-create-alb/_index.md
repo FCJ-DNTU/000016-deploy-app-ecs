@@ -3,11 +3,11 @@ title = "Create Application Load Balancer"
 date = 2024
 weight = 2
 chapter = false
-pre = "<b>6.2. </b>"
+pre = "<b>5.2. </b>"
 +++
 
 {{% notice note%}}
-To enable MFA, you need to log in to AWS using the root user. 
+To enable MFA, you need to log in to AWS using the root user.
 {{% /notice%}}
 
 #### Activate virtual MFA devices via Console
@@ -27,6 +27,6 @@ To set up and activate virtual MFA devices:
 5. Install a [compatible Authenticator application](https://aws.amazon.com/iam/features/mfa/#Virtual_MFA_Applications) on your phone.
 6. After installing the app, select **Show QR Code** and use your Authenticator application to scan the QR code.
    - Sample MFA registration with _Microsoft Authenticator_:
-      ![MFA QR Scanner](/images/1-account-setup/MFAScannerQR.png?width=90pc)
-1. In the **MFA code 1** box, enter 6 numeric characters from the app. Wait 30 seconds or until the next refresh, then enter the next 6 characters into the **MFA Code 2** box and select **Assign MFA**.
-2. You have now completed activating your **virtual MFA device**!
+     ![MFA QR Scanner](/images/1-account-setup/MFAScannerQR.png?width=90pc)
+7. In the **MFA code 1** box, enter 6 numeric characters from the app. Wait 30 seconds or until the next refresh, then enter the next 6 characters into the **MFA Code 2** box and select **Assign MFA**.
+8. You have now completed activating your **virtual MFA device**!
