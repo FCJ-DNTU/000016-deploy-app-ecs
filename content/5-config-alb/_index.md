@@ -1,9 +1,9 @@
 +++
 title = "Configure Application Load Balancer"
 date = 2024
-weight = 6
+weight = 5
 chapter = false
-pre = "<b>6. </b>"
+pre = "<b>5. </b>"
 +++
 
 #### Creating an Admininistrator Group

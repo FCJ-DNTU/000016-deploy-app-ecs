@@ -1,10 +1,9 @@
 +++
 title = "Kết quả kiểm tra"
 date = 2024
-weight = 8
+weight = 7
 chapter = false
-pre = "<b>8. </b>"
+pre = "<b>7. </b>"
 +++
 
 #### Creating an Admininistrator Group
-

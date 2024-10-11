@@ -3,11 +3,11 @@ title = "Tạo Target Group"
 date = 2024
 weight = 1
 chapter = false
-pre = "<b>6.1. </b>"
+pre = "<b>5.1. </b>"
 +++
 
 {{% notice note %}}
-Để kích hoạt MFA, bạn cần đăng nhập vào AWS sử dụng root user. 
+Để kích hoạt MFA, bạn cần đăng nhập vào AWS sử dụng root user.
 {{% /notice %}}
 
 #### Kích hoạt thiết bị MFA ảo thông qua Console
@@ -25,8 +25,7 @@ pre = "<b>6.1. </b>"
 
 4. Trong Manage MFA Device, chọn **Virtual MFA device** sau đó chọn **Continue**.
 5. Cài đặt ứng dụng tương thích trên điện thoại của bạn. [Danh sách ứng dụng MFA](https://aws.amazon.com/iam/features/mfa/?audit=2019q1).
-6. Sau khi cài đặt ứng dụng, chọn **Show QR Code** và dùng điện thoại đang mở ứng dụng MFA của bạn để scan mã QR.
-    - ***Ví dụ:** Bạn đang sử dụng *Microsoft Authenticator*.
-![MFA QR Scanner](/images/1-account-setup/MFAScannerQR.png?width=90pc)
+6. Sau khi cài đặt ứng dụng, chọn **Show QR Code** và dùng điện thoại đang mở ứng dụng MFA của bạn để scan mã QR. - **\*Ví dụ:** Bạn đang sử dụng _Microsoft Authenticator_.
+   ![MFA QR Scanner](/images/1-account-setup/MFAScannerQR.png?width=90pc)
 7. Ở ô **MFA code 1**, nhập 6 kí tự số trong app, đợi 30 giây sau đó nhập tiếp 6 kí tự số vào ô **MFA Code 2** và chọn **Assign MFA**.
 8. Bây giờ bạn đã hoàn thành kích hoạt **thiết bị MFA ảo**.
