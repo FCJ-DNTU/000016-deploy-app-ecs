@@ -6,12 +6,15 @@ chapter = false
 pre = "<b>2. </b>"
 +++
 
-For increased security, we recommend that you configure multi-factor authentication (MFA) to help protect your AWS resources.
+#### Prerequisites for the workshop
 
-You can enable **one** MFA device (of any kind) per root user or IAM user. 
+To participate in this workshop, you need to complete the configuration steps outlined in the workshop [Deploy Application on Docker Container](https://fcj-dntu.github.io/000015-deploy-app-docker).
 
-In this guide, we will go through 3 MFA options:
-1. [Configure RDS](1-config-rds)
-2. [Launch EC2](2-launch-ec2)
-3. [Install Dependencies](3-install-dependencies)
-4. [Create CodeDeploy Role](4-create-codedeploy-role)
+After completing the workshop on deploying an application on Docker Container, you will have the necessary infrastructure ready to proceed with ECS, including:
+
+- EC2 Instance
+- RDS Database Instance
+- Application deployed as a Container
+- Image pushed to Docker Hub or Amazon ECR
+
+With these services and infrastructure in place, we will proceed with the workshop on deploying applications using ECS.
