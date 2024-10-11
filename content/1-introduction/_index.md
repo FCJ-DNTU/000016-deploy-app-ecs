@@ -10,5 +10,3 @@ Amazon ECS automates container management, including creating, maintaining, and 
 - **Connect ECS to RDS** so the application can securely and efficiently access the database.
 
 With ECS, you can leverage features like **Auto Scaling** to ensure your application is always ready to handle increased traffic without worrying about managing the infrastructure.
-
-Get ready to launch your application into a production environment with ECS, where everything from deployment to management and scaling becomes simpler and more powerful than ever!
