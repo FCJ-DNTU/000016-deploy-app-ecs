@@ -1,9 +1,9 @@
 +++
-title = "Tạo ECS Service"
+title = "Test Result"
 date = 2024
-weight = 6
+weight = 8
 chapter = false
-pre = "<b>6. </b>"
+pre = "<b>8. </b>"
 +++
 
 #### Creating an Admininistrator Group

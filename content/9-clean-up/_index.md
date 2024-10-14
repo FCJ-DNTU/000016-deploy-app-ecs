@@ -1,9 +1,9 @@
 +++
-title = "Kết quả kiểm tra"
+title = "Clean up resources"
 date = 2024
-weight = 7
+weight = 9
 chapter = false
-pre = "<b>7. </b>"
+pre = "<b>9. </b>"
 +++
 
 #### Creating an Admininistrator Group
