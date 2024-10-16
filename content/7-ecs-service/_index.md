@@ -1,9 +1,9 @@
 +++
-title = "Tạo ECS Cluster"
+title = "Create ECS Service"
 date = 2024
-weight = 3
+weight = 7
 chapter = false
-pre = "<b>3. </b>"
+pre = "<b>7. </b>"
 +++
 
 #### Creating an Admininistrator Group

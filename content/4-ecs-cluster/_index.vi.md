@@ -1,5 +1,5 @@
 +++
-title = "Tạo ECS Task Definition"
+title = "Tạo ECS Cluster"
 date = 2024
 weight = 4
 chapter = false

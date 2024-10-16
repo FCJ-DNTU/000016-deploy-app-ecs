@@ -1,9 +1,9 @@
 +++
 title = "Cấu hình Application Load Balancer"
 date = 2024
-weight = 5
+weight = 6
 chapter = false
-pre = "<b>5. </b>"
+pre = "<b>6. </b>"
 +++
 
 #### Creating an Admininistrator Group
