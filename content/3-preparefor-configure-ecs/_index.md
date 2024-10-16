@@ -1,28 +1,28 @@
-+++ 
-title = "Preparing for ECS" 
-date = 2024 
-weight = 3 
-chapter = false 
-pre = "<b>3. </b>" 
++++
+title = "Preparing for ECS"
+date = 2024
+weight = 3
+chapter = false
+pre = "<b>3. </b>"
 +++
 
 #### Adding a Private Subnet
 
-In the VPC management interface, from the left-hand menu:
+In the VPC management console, on the left-side panel:
 
 - Select **Subnet**
 - Click **Create subnet**
 
 ![3.1](/images/3-prepare-for-ecs/3.1.png)
 
-- Select the VPC **FCJ-Lab-vpc**
+- Choose VPC **FCJ-Lab-vpc**
 
 ![3.2](/images/3-prepare-for-ecs/3.2.png)
 
-Follow these settings:
+Follow the instructions:
 
 - Subnet name: `FCJ-Lab-subnet-private3`
-- Choose Availability Zone
+- Select Availability Zone
 - IPv4 VPC CIDR block: `10.0.0.0/16`
 - IPv4 subnet CIDR block: `10.0.32.0/20`
 - Click **Create subnet**
@@ -36,7 +36,7 @@ Result:
 Similarly, create another subnet:
 
 - Subnet name: `FCJ-Lab-subnet-private4`
-- Choose a different Availability Zone than the one chosen earlier
+- Choose a different Availability Zone from the one above
 - IPv4 VPC CIDR block: `10.0.0.0/16`
 - IPv4 subnet CIDR block: `10.0.64.0/20`
 - Click **Create subnet**
@@ -49,21 +49,21 @@ Result:
 
 #### Creating a NAT Gateway
 
-First, we need to create Elastic IPs to assign to the NAT Gateway. In the VPC management interface, from the left-hand menu:
+First, create Elastic IPs for the NAT Gateway. In the VPC management console, on the left-side panel:
 
 - Select **Elastic IPs**
 - Click **Allocate Elastic IP address**
 
 ![3.7](/images/3-prepare-for-ecs/3.7.png)
 
-Elastic IP address configuration:
+Configure Elastic IP address:
 
 - Public IPv4 address pool: **Amazon's pool of IPv4 address**
-- Network border group: **ap-southeast-1** if using the same region
+- Network border group: **ap-southeast-1** (if using the same region)
 
 ![3.8](/images/3-prepare-for-ecs/3.8.png)
 
-For tags (optional):
+In the optional tags:
 
 - Key: `Name`
 - Value: `FCJ-Lab-IP`
@@ -71,30 +71,30 @@ For tags (optional):
 
 ![3.9](/images/3-prepare-for-ecs/3.9.png)
 
-Next, we'll create the NAT Gateway. From the right-hand menu:
+Next, create the NAT Gateway. In the right-side panel:
 
 - Select **NAT gateways**
 - Click **Create NAT gateway**
 
 ![3.11](/images/3-prepare-for-ecs/3.11.png)
 
-NAT Gateway configuration:
+Configure the NAT Gateway:
 
 - Name: `FCJ-Lab-nat`
-- Subnet: Select a public subnet as instructed
+- Subnet: select the public subnet as instructed
 - Connectivity type: **Public**
-- Select the Elastic IP created earlier
+- Select the Elastic IP created in the previous step
 - Click **Create NAT gateway**
 
 ![3.12](/images/3-prepare-for-ecs/3.12.png)
 
-Wait a moment until the state changes to **Available**.
+Wait until the state becomes **Available**.
 
 ![3.14](/images/3-prepare-for-ecs/3.14.png)
 
-#### Route Table
+#### Creating a Route Table
 
-In the VPC management interface, from the left-hand menu:
+In the VPC management console, on the left-side panel:
 
 - Select **Route tables**
 - Click **Create route table**
@@ -107,21 +107,21 @@ In the VPC management interface, from the left-hand menu:
 
 ![3.16](/images/3-prepare-for-ecs/3.16.png)
 
-Next, we'll associate the NAT Gateway with the route table:
+Next, associate the NAT gateway with the route table:
 
-- Select the route table created
+- Select the route table you just created
 - Click **Edit routes**
 
 ![3.17](/images/3-prepare-for-ecs/3.17.png)
 
 - Click **Add route**
-- Destination: **0.0.0.0/0**
-- Target: **NAT Gateway**
-- Select the NAT Gateway **FCJ-Lab-nat** created earlier
+- Set Destination to **0.0.0.0/0**
+- Set Target to **NAT Gateway**
+- Choose the NAT gateway named **FCJ-Lab-nat** created earlier
 
 ![3.18](/images/3-prepare-for-ecs/3.18.png)
 
-Next, associate the private subnets to the route table created. In the route table details:
+Next, associate the private subnets with the route table. In the details section of the route table:
 
 - Select **Subnet associations**
 - Click **Edit subnet associations**
@@ -134,48 +134,81 @@ Next, associate the private subnets to the route table created. In the route tab
 
 #### Creating Security Groups
 
-In the VPC management interface, from the left-hand menu:
+In the VPC management console, on the left-side panel:
 
 - Select **Security groups**
 - Click **Create security group**
 
 ![3.22](/images/3-prepare-for-ecs/3.22.png)
 
-Security group configuration:
+Configure the security group:
 
 - Name: `FCJ-Lab-sg-private`
 - Description: `Allow access for Internet`
-- Select the VPC created earlier
+- Select the VPC you created
 
 For Inbound rules:
 
-- Select **All traffic**
-- Choose **FCJ-Lab-sg-public**
+- Choose **All traffic**
+- Select **FCJ-Lab-sg-public**
 
 ![3.23](/images/3-prepare-for-ecs/3.23.png)
 
 For Outbound rules:
 
-- Select **All traffic**
-- Choose **Anywhere IPv4**
+- Choose **All traffic**
+- Select **Anywhere IPv4**
 
 ![3.24](/images/3-prepare-for-ecs/3.24.png)
 
-Next, assign this security group to the **FCJ-Lab-sg-db** security group.
+Next, attach the security group you just created to the **FCJ-Lab-sg-db** security group.
 
-In the Security groups management interface:
+In the Security Groups management:
 
 - Select **FCJ-Lab-sg-db**
 - Click **Action**
-- Choose **Edit inbound rules**
+- Click **Edit inbound rules**
 
 ![3.25](/images/3-prepare-for-ecs/3.25.png)
 
-In the Inbound Rules:
+For Inbound rules:
 
-- Add rule
-- Select **MYSQL/Aurora**
-- Custom, select the security group **FCJ-Lab-sg-private**
+- Add a new rule
+- Select MYSQL/Aurora
+- Set Custom to point to the **FCJ-Lab-sg-private** security group
 - Click **Save rules**
 
 ![3.26](/images/3-prepare-for-ecs/3.26.png)
+
+#### Creating a CodeDeploy Role
+
+- Search and select `IAM`
+
+![3.29](/images/3-prepare-for-ecs/3.29.png)
+
+- Select `Roles`
+- Click **Create role**
+
+![3.30](/images/3-prepare-for-ecs/3.30.png)
+
+In the Use Case section, fill out the following details:
+
+- Services or use case: `CodeDeploy`
+- Select **CodeDeploy - ECS**
+- Click **Next**
+
+![3.31](/images/3-prepare-for-ecs/3.31.png)
+
+Continue by clicking **Next**.
+
+![3.32](/images/3-prepare-for-ecs/3.32.png)
+
+- Role name: `CodeDeployServiceRole`
+
+![3.33](/images/3-prepare-for-ecs/3.33.png)
+
+- Click **Create role**
+
+![3.34](/images/3-prepare-for-ecs/3.34.png)
+
+Now we've completed all the steps to prepare for the workshop.
