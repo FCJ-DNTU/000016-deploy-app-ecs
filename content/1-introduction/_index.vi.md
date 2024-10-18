@@ -6,6 +6,10 @@ chapter = false
 pre = "<b>1. </b>"
 +++
 
+#### Kiến trúc
+
+![1](/images/.png)
+
 #### Giới thiệu về Triển khai Ứng dụng lên Amazon Elastic Container Service (ECS)
 
 Sau khi đã hoàn tất việc thiết lập Docker image, container và RDS trong các bước trước ( [Deploy Application on Docker Container](https://fcj-dntu.github.io/000015-deploy-app-docker) ) , chúng ta sẽ tiếp tục đưa ứng dụng của mình lên **Amazon Elastic Container Service (ECS)** — một dịch vụ mạnh mẽ của AWS cho phép triển khai và quản lý các ứng dụng containerized trên quy mô lớn.
@@ -18,3 +22,16 @@ Amazon ECS giúp tự động hóa việc quản lý container, bao gồm việc
 - **Kết nối ECS với RDS** để ứng dụng có thể truy cập cơ sở dữ liệu một cách an toàn và hiệu quả.
 
 Với ECS, bạn có thể tận dụng các tính năng tự động hóa như **Auto Scaling** để đảm bảo ứng dụng của bạn luôn sẵn sàng phục vụ khi có lưu lượng tăng cao mà không cần lo lắng về việc quản lý hạ tầng.
+
+
+#### Mô tả tiến trình
+
+Ban đầu là là mình sẽ configure lại hạ tầng của bài 15. Sau đó là tiền hành config thêm một số resource như **subnet** (private), **nat gateway** và **security group**. Sau khi đã ổn định về hạ tầng thì là lúc chuẩn bị cho triển khai, bao gồm các bước (như đã thấy ở trong bài):
+
+1. **Build image**, sau đó là đẩy lên **ECR** và **Dockerhub**.
+2. Đăng kí trước một namespace trong **CloudMap**.
+3. Tạo **ECS Cluster**.
+4. Tạo **task definition** cho **Frontend** lẫn **backend** (backend trước, frontend sau), cả 2 thằng này đều có biến môi trường.
+5. Tạo **ALB**, gồm **target group** cho **Frontend service**.
+6. Tạo **ECS Service**, đầu tiên là cho **backend** trước, sau đó là tới **frontend**.
+7. Kiểm tra kết quả.
