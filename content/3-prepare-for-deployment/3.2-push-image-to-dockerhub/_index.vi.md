@@ -13,18 +13,18 @@ pre = "<b>3.2. </b>"
 - Đăng xuất (xoá ECR Credential) ECR khỏi Docker với `docker logout`.
 - Và tiến hành đăng nhập với `docker login -u "your-docker-username"`.
 
-**INSERT IMAGE HERE**
+![3.2.1](/images/3-prepare-for-deployment/3.2.1.png)
 
 Liệt kê lại các Image đang có, giờ chúng ta sẽ không build lại nữa, mà chỉ cần thêm một tag khác cho Dockerhub là được. Gắn tag xong thì liệt kê lại thì mình sẽ thấy tag mới đã được thêm.
 
-**INSERT IMAGE HERE**
+![3.2.2](/images/3-prepare-for-deployment/3.2.2.png)
 
 Giờ thì tiếp tục tải image này lên Dockerhub
 
-**INSERT IMAGE HERE**
+![3.2.3](/images/3-prepare-for-deployment/3.2.3.png)
 
 Và kiểm tra lại kết quả
 
-**INSERT IMAGE HERE**
+![3.2.4](/images/3-prepare-for-deployment/3.2.4.png)
 
 Như vậy thì chúng ta đã tải image lên cả ECR và Dockerhub. Giờ thì bạn có thể dùng image ở bất cứ Registry nào để triển khai Frontend Service.

@@ -8,9 +8,9 @@ pre = "<b>6.1. </b>"
 
 Lưu ý, như mình đã nói ở trên thì trong phần này, bạn có thể dùng image ở ECR hoặc Dockerhub đều được.
 
-**INSERT IMAGE HERE**
+![6.1.1](/images/6-create-task-definition/6.1.1.png)
 
-**INSERT IMAGE HERE**
+![6.1.2](/images/6-create-task-definition/6.1.2.png)
 
 #### Cấu hình Task Definition cho Backend Service
 
@@ -19,7 +19,7 @@ Vẫn ở trong giao diện ECS Console
 - Chọn **Task definitions**
 - Ấn **Create new task definition**.
 
-**INSERT IMAGE HERE**
+![6.1.3](/images/6-create-task-definition/6.1.3.png)
 
 Điền trước một số thông tin cho task definition
 
@@ -28,7 +28,7 @@ Vẫn ở trong giao diện ECS Console
   - Launch type: chọn **AWS Fargate**
   - OS, Architecture, Network: chọn **Linux/x86_64**, network mặc định là **awsvcp** khi chọn AWS Fargate.
 
-**INSERT IMAGE HERE**
+![6.1.4](/images/6-create-task-definition/6.1.4.png)
 
 Các thông tin tiếp theo
 
@@ -36,7 +36,7 @@ Các thông tin tiếp theo
 - Memory: **8 GB**
 - Task role và Task execution role để mặc định
 
-**INSERT IMAGE HERE**
+![6.1.5](/images/6-create-task-definition/6.1.5.png)
 
 Trong phần định nghĩa container, điền các thông tin
 
@@ -52,7 +52,7 @@ Trong phần định nghĩa container, điền các thông tin
 Khi cấu hình container trong AWS Fargate, thì mình sẽ không cần quan tâm tới Port của host, vì mặc định port của host sẽ là của container.
 {{% /notice %}}
 
-**INSERT IMAGE HERE**
+![6.1.6](/images/6-create-task-definition/6.1.6.png)
 
 Tiếp theo là thêm biến môi trường, phần này quan trọng, nếu như không cấu hình thì NodeJS server ở bên trong không chạy được, bao gồm:
 
@@ -64,14 +64,14 @@ Tiếp theo là thêm biến môi trường, phần này quan trọng, nếu nh�
 - `PORT` = `5000`
 - `JWT_SECRET` = `0bac010eca699c25c8f62ba86e319c2305beb94641b859c32518cb854addb5f4`
 
-**INSERT IMAGE HERE**
+![6.1.7](/images/6-create-task-definition/6.1.7.png)
 
 Giữ các cấu hình này mặc định
 
-**INSERT IMAGE HERE**
+![6.1.8](/images/6-create-task-definition/6.1.8.png)
 
 Cuối cùng là ấn **Create** để tạo task definition
 
-**INSERT IMAGE HERE**
+![6.1.9](/images/6-create-task-definition/6.1.9.png)
 
-**INSERT IMAGE HERE**
+![6.1.10](/images/6-create-task-definition/6.1.10.png)

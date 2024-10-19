@@ -15,7 +15,7 @@ Trở lại màn hình Task definition
 - Xổ **Create new task definition**
 - Chọn **Create new task definition**
 
-**INSERT IMAGE HERE**
+![6.2.1](/images/6-create-task-definition/6.2.1.png)
 
 Tiếp tục điền các thông tin cơ bản
 
@@ -24,7 +24,7 @@ Tiếp tục điền các thông tin cơ bản
   - Launch type: chọn **AWS Fargate**
   - OS, Architecture, Network: chọn **Linux/x86_64**, network mặc định là **awsvcp** khi chọn AWS Fargate.
 
-**INSERT IMAGE HERE**
+![6.2.2](/images/6-create-task-definition/6.2.2.png)
 
 Các thông tin tiếp theo
 
@@ -32,7 +32,7 @@ Các thông tin tiếp theo
 - Memory: **6 GB**
 - Task role và Task execution role để mặc định
 
-**INSERT IMAGE HERE**
+![6.2.3](/images/6-create-task-definition/6.2.3.png)
 
 Trong phần định nghĩa container, điền các thông tin
 
@@ -44,21 +44,21 @@ Trong phần định nghĩa container, điền các thông tin
   - Memory hard limit: `3`
   - Memory soft limit: `2`
 
-**INSERT IMAGE HERE**
+![6.2.4](/images/6-create-task-definition/6.2.4.png)
 
 Tiếp theo là thêm biến môi trường, bao gồm:
 
 - `BACKEND_HOST` = `backend.fcjresbar.internal`
 - `BACKEND_PORT` = `5000`
 
-**INSERT IMAGE HERE**
+![6.2.5](/images/6-create-task-definition/6.2.5.png)
 
 Giữ các cấu hình này mặc định
 
-**INSERT IMAGE HERE**
+![6.2.6](/images/6-create-task-definition/6.2.6.png)
 
 Cuối cùng là ấn **Create** để tạo task definition
 
-**INSERT IMAGE HERE**
+![6.2.7](/images/6-create-task-definition/6.2.7.png)
 
-**INSERT IMAGE HERE**
+![6.2.8](/images/6-create-task-definition/6.2.8.png)
