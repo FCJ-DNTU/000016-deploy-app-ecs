@@ -1,9 +1,9 @@
 +++
-title: "Clean Up Resources"
-date: 2024
-weight: 10
-chapter: false
-pre: "<b>10. </b>"
+title = "Clean Up Resources"
+date = 2024
+weight = 10
+chapter = false
+pre = "<b>10. </b>"
 +++
 
 ### Delete Elastic Container Service
