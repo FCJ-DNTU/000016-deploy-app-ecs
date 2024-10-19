@@ -13,14 +13,14 @@ Trên thanh tìm kiếm
 - Gõ `ECS`
 - Chọn **Elastic Container Service**
 
-**INSERT IMAGE HERE**
+![5.1](/images/5-create-ecs-cluster/5.1.png)
 
 Trong giao diện chính của ECS Console
 
 - Chọn **Cluster**
 - Ấn **Create cluster** để tạo một cluster mới
 
-**INSERT IMAGE HERE**
+![5.2](/images/5-create-ecs-cluster/5.2.png)
 
 Trong trang tạo Cluster
 
@@ -28,14 +28,14 @@ Trong trang tạo Cluster
 - Namespace: sẽ đươc tự động tạo
 - Infrastructure: chọn **AWS Fargate**.
 
-**INSERT IMAGE HERE**
+![5.3](/images/5-create-ecs-cluster/5.3.png)
 
 Trong phần Monitoring
 
 - Chọn **Use Container Insight**
 - Ấn **Create** để tạo cluster
 
-**INSERT IMAGE HERE**
+![5.4](/images/5-create-ecs-cluster/5.4.png)
 
 {{% notice note %}}
 Bật Container Insight là vì trong bài workshop sau chúng ta sẽ quan sát kĩ hơn về các ECS Service và các Container ở bên trong một Cluster.
@@ -43,4 +43,4 @@ Bật Container Insight là vì trong bài workshop sau chúng ta sẽ quan sát
 
 Kết quả
 
-**INSERT IMAGE HERE**
+![5.5](/images/5-create-ecs-cluster/5.5.png)

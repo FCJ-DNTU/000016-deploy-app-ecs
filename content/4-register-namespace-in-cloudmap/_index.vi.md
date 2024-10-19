@@ -16,13 +16,13 @@ Tìm `Cloud Map` ở trên trang console
 
 - Chọn Cloud Map
 
-**INSERT IMAGE HERE**
+![4.1](/images/4-register-namespace-in-cloudmap/4.1.png)
 
 Trong mục namespace
 
 - Ấn **Create namespace**
 
-**INSERT IMAGE HERE**
+![4.2](/images/4-register-namespace-in-cloudmap/4.2.png)
 
 Trong giao diện tạo namespace
 
@@ -30,7 +30,7 @@ Trong giao diện tạo namespace
 - Description: `Use for internal API Calls and DNS`
 - Instance discovery: chọn **API calls and DNS queries in VPCs**.
 
-**INSERT IMAGE HERE**
+![4.3](/images/4-register-namespace-in-cloudmap/4.3.png)
 
 Tiếp theo
 
@@ -38,11 +38,11 @@ Tiếp theo
 - TTL (Time to live): 20s
 - Ấn **Create namespace**
 
-**INSERT IMAGE HERE**
+![4.4](/images/4-register-namespace-in-cloudmap/4.4.png)
 
 Namespace của chúng ta đã được tạo thành công
 
-**INSERT IMAGE HERE**
+![4.5](/images/4-register-namespace-in-cloudmap/4.5.png)
 
 #### Tạo service trong namespace
 
@@ -52,7 +52,7 @@ Giờ thì chúng ta sẽ tạo service trong Namespace mới tạo
 - Kéo xuống dưới cùng
 - Ấn **Create service**
 
-**INSERT IMAGE HERE**
+![4.6](/images/4-register-namespace-in-cloudmap/4.6.png)
 
 Điền một số thông tin sau để tạo service
 
@@ -60,7 +60,7 @@ Giờ thì chúng ta sẽ tạo service trong Namespace mới tạo
 - Description: `Backend Service Discovery Name`
 - Discoverable by: chọn **API and DNS**
 
-**INSERT IMAGE HERE**
+![4.7](/images/4-register-namespace-in-cloudmap/4.7.png)
 
 {{% notice note %}}
 Với service name là **backend**, thì chúng ta sẽ có tên đầy đủ của Service Discovery cho Backend là `backend.fcjresbar.internal`, nhớ sao chéo lại tên này vì chúng ta cần nó để cấu hình Task Definition cho Frontend service.
@@ -73,10 +73,10 @@ Tiếp theo trong phần DNS Configuration
 - TTL: 300
 - Health check option: chọn No health check
 
-**INSERT IMAGE HERE**
+![4.8](/images/4-register-namespace-in-cloudmap/4.8.png)
 
-**INSERT IMAGE HERE**
+![4.9](/images/4-register-namespace-in-cloudmap/4.9.png)
 
 Giờ chúng ta phải chờ một lúc để service có thể được tạo xong
 
-**INSERT IMAGE HERE**
+![4.10](/images/4-register-namespace-in-cloudmap/4.10.png)
