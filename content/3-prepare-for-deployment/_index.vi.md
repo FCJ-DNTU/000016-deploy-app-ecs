@@ -13,4 +13,4 @@ pre = "<b>3. </b>"
 #### Nội dung
 
 1. [Tải Docker image lên ECR](3.1-push-image-to-ecr/)
-2. [Tải Docker image lên Dockerhub](3.1-push-image-to-ecr/)
+2. [Tải Docker image lên Dockerhub](3.2-push-image-to-dockerhub/)

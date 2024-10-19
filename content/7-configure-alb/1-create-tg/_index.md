@@ -6,27 +6,42 @@ chapter = false
 pre = "<b>7.1. </b>"
 +++
 
-{{% notice note%}}
-To enable MFA, you need to log in to AWS using the root user.
-{{% /notice%}}
+#### Configure Target Group
 
-#### Activate virtual MFA devices via Console
+In the search bar:
 
-To set up and activate virtual MFA devices:
+- Type `Target Groups`
+- Select **Target Groups** (EC2 feature)
 
-1. Sign-in to the AWS Console.
-2. In the upper right corner, you will see your account name. Click the drop-down and select **My Security Credentials**.
+![7.1.1](/images/7-configure-alb/7.1.1.png)
 
-![Virtual MFA Device](/images/1-account-setup/MySecurity_v1.png?width=15pc)
+On the Target Group screen, click **Create target group**
 
-3. Expand **Multi-factor authentication (MFA)** and select **Active MFA**.
+![7.1.2](/images/7-configure-alb/7.1.2.png)
 
-![MFA Section](/images/1-account-setup/MFA.png?width=90pc)
+In the Basic configuration section, select **IP Address**.
 
-4. In Manage MFA Device, select **Virtual MFA device** then select **Continue**.
-5. Install a [compatible Authenticator application](https://aws.amazon.com/iam/features/mfa/#Virtual_MFA_Applications) on your phone.
-6. After installing the app, select **Show QR Code** and use your Authenticator application to scan the QR code.
-   - Sample MFA registration with _Microsoft Authenticator_:
-     ![MFA QR Scanner](/images/1-account-setup/MFAScannerQR.png?width=90pc)
-7. In the **MFA code 1** box, enter 6 numeric characters from the app. Wait 30 seconds or until the next refresh, then enter the next 6 characters into the **MFA Code 2** box and select **Assign MFA**.
-8. You have now completed activating your **virtual MFA device**!
+![7.1.3](/images/7-configure-alb/7.1.3.png)
+
+Enter the following information:
+
+- Name: `FCJ-Lab-fe-tg`
+- Protocol : Port: HTTP : 80
+- VPC: select the VPC that we created earlier.
+- Protocol version: HTTP1
+
+![7.1.4](/images/7-configure-alb/7.1.4.png)
+
+In the Health check section, we will add a Health check path as `/health` and click **Next** to continue.
+
+![7.1.5](/images/7-configure-alb/7.1.5.png)
+
+In this section, we will keep the default configurations.
+
+![7.1.6](/images/7-configure-alb/7.1.6.png)
+
+Click **Create target group** to create the target group.
+
+![7.1.7](/images/7-configure-alb/7.1.7.png)
+
+![7.1.8](/images/7-configure-alb/7.1.8.png)

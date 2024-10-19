@@ -6,7 +6,7 @@ chapter = false
 pre = "<b>7. </b>"
 +++
 
-#### Creating an Admininistrator Group
+#### Configure load balancer
 
 1. [Create Target Group](1-create-tg)
 2. [Create Application Load Balancer](2-create-alb)

@@ -6,27 +6,48 @@ chapter = false
 pre = "<b>7.2. </b>"
 +++
 
-{{% notice note%}}
-To enable MFA, you need to log in to AWS using the root user.
-{{% /notice%}}
+#### Create Application Load Balancer
 
-#### Activate virtual MFA devices via Console
+Still in this interface:
 
-To set up and activate virtual MFA devices:
+- Select **Load balancers**
+- Click **Create load balancer**
 
-1. Sign-in to the AWS Console.
-2. In the upper right corner, you will see your account name. Click the drop-down and select **My Security Credentials**.
+![7.2.1](/images/7-configure-alb/7.2.1.png)
 
-![Virtual MFA Device](/images/1-account-setup/MySecurity_v1.png?width=15pc)
+For Load balancer type, select Application Load Balancer and click **Create**
 
-3. Expand **Multi-factor authentication (MFA)** and select **Active MFA**.
+![7.2.2](/images/7-configure-alb/7.2.2.png)
 
-![MFA Section](/images/1-account-setup/MFA.png?width=90pc)
+In the Basic configuration section:
 
-4. In Manage MFA Device, select **Virtual MFA device** then select **Continue**.
-5. Install a [compatible Authenticator application](https://aws.amazon.com/iam/features/mfa/#Virtual_MFA_Applications) on your phone.
-6. After installing the app, select **Show QR Code** and use your Authenticator application to scan the QR code.
-   - Sample MFA registration with _Microsoft Authenticator_:
-     ![MFA QR Scanner](/images/1-account-setup/MFAScannerQR.png?width=90pc)
-7. In the **MFA code 1** box, enter 6 numeric characters from the app. Wait 30 seconds or until the next refresh, then enter the next 6 characters into the **MFA Code 2** box and select **Assign MFA**.
-8. You have now completed activating your **virtual MFA device**!
+- Name: `FCJ-Lab-alb`
+- Scheme: select **Internet-facing**
+- Load balancer IP address type: IPv4
+
+![7.2.3](/images/7-configure-alb/7.2.3.png)
+
+In the Network Mapping section:
+
+- VPC: select the VPC that we created earlier
+- Availability Zones
+  - Select 2 AZs, and for each AZ, select the Public subnets.
+
+![7.2.4](/images/7-configure-alb/7.2.4.png)
+
+Next:
+
+- In the Security group section, select the SG (Security Group) that we created earlier.
+- In Listeners and routing:
+  - Protocol : Port: HTTP : 80
+  - Target group: select **FCJ-Lab-fe-tg**
+
+![7.2.5](/images/7-configure-alb/7.2.5.png)
+
+Review the information before creating.
+
+![7.2.6](/images/7-configure-alb/7.2.6.png)
+
+Result:
+
+![7.2.7](/images/7-configure-alb/7.2.7.png)
