@@ -1,9 +1,9 @@
 +++
-title: "Dọn Dẹp Tài Nguyên"
-date: 2024
-weight: 10
-chapter: false
-pre: "<b>10. </b>"
+title = "Dọn Dẹp Tài Nguyên"
+date = 2024
+weight = 10
+chapter = false
+pre = "<b>10. </b>"
 +++
 
 ### Xoá Elastic Container Service
