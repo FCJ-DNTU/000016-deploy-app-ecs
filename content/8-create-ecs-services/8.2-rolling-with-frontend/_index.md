@@ -8,7 +8,7 @@ pre = "<b>8.2. </b>"
 
 After creating the Backend service, we will now proceed to create the Frontend service.
 
-#### TCreate Frontend Service
+#### Create Frontend Service
 
 Next, in the cluster console page, click **Create** to add the Frontend service.
 
