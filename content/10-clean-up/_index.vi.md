@@ -141,3 +141,15 @@ Trên giao diện AWS Console:
 - Nhấn **Delete**.
 
 ![10.22](/images/10-clean-up/10.22.png)
+
+#### NAT Gateway
+
+- Tìm và chọn `NAT gateway`
+
+![10.23](/images/10-clean-up/10.23.png)
+
+- Chọn NAT Gateway chúng ta đã tạo
+- Chọn **Action**
+- Chọn **Delete NAT gateway**
+
+![10.24](/images/10-clean-up/10.24.png)
