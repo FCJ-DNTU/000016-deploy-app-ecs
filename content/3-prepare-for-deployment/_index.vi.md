@@ -10,6 +10,8 @@ pre = "<b>3. </b>"
 
 Ở cuối bài trước thì chúng ta đã thực hiện thao tác build image cho cả NodeJS và Nginx React, và Docker Image của NodeJS đã có thể hoạt động được với ECS Service như bình thường, nhưng với Image của Nginx React thì cần phải thay đổi lại một chút, cho nên là ở trong phần này chúng ta sẽ thực hiện lại thao tác xây dựng image cho Nginx React.
 
+![applications-architecture](/images/3-prepare-for-deployment/applications-architecture.png)
+
 #### Nội dung
 
 1. [Tải Docker image lên ECR](3.1-push-image-to-ecr/)

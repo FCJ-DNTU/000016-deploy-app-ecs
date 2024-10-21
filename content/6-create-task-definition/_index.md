@@ -8,8 +8,9 @@ pre = "<b>6. </b>"
 
 In order for ECS Service to create and manage containers within the Cluster, we first need to create a Task Definition. In this section, we will create task definitions for both the Frontend and Backend.
 
+![application-w-ecs](/images/6-create-task-definition/application-w-ecs.png)
+
 #### Contents
 
 1. [Create task definition for backend](6.1-backend-task-definition/)
 2. [Create task definition for frontend](6.2-frontend-task-definition/)
-
