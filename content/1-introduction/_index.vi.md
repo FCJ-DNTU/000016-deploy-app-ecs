@@ -8,7 +8,7 @@ pre = "<b>1. </b>"
 
 #### Kiến trúc
 
-![1](/images/.png)
+![1](/images/1-introduction/1.1.png)
 
 #### Amazon Elastic Container Service (ECS)
 
