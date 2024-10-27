@@ -40,7 +40,7 @@ Liên kết Security Group với nhóm **FCJ-Lab-sg-db**:
 - Chọn **FCJ-Lab-sg-db**
 - Nhấn **Action**, sau đó chọn **Edit inbound rules**
 
-![3.25](/images/2-preparation/3.25.png)
+![3.25](/images/2-preparation/3.26.png)
 
 Cấu hình Inbound Rule:
 
@@ -49,33 +49,4 @@ Cấu hình Inbound Rule:
 - Source: Chọn Security Group **FCJ-Lab-sg-private**
 - Nhấn **Save rules**
 
-![3.26](/images/2-preparation/3.26.png)
-
-#### Tạo CodeDeploy Role
-
-Tìm kiếm và chọn **IAM**
-
-![3.29](/images/2-preparation/3.29.png)
-
-- Chọn **Roles**
-- Nhấn **Create role**
-
-![3.30](/images/2-preparation/3.30.png)
-
-Trong phần Use case, chọn:
-
-- Service or use case: `CodeDeploy`
-- Chọn **CodeDeploy - ECS**
-- Nhấn **Next**
-
-![3.31](/images/2-preparation/3.31.png)
-
-- Nhấn **Next**
-
-![3.32](/images/2-preparation/3.32.png)
-
-- Role name: `CodeDeployServiceRole`
-
-![3.33](/images/2-preparation/3.33.png)
-
-- Nhấn **Create role**
+![3.26](/images/2-preparation/3.27.png)

@@ -40,7 +40,7 @@ Link the Security Group with the group **FCJ-Lab-sg-db**:
 - Select **FCJ-Lab-sg-db**
 - Click **Action**, then select **Edit inbound rules**
 
-![3.25](/images/2-preparation/3.25.png)
+![3.26](/images/2-preparation/3.26.png)
 
 Configure Inbound Rule:
 
@@ -49,33 +49,4 @@ Configure Inbound Rule:
 - Source: Choose Security Group **FCJ-Lab-sg-private**
 - Click **Save rules**
 
-![3.26](/images/2-preparation/3.26.png)
-
-#### Create CodeDeploy Role
-
-Search for and select **IAM**.
-
-![3.29](/images/2-preparation/3.29.png)
-
-- Select **Roles**
-- Click on **Create role**
-
-![3.30](/images/2-preparation/3.30.png)
-
-In the use case section, choose:
-
-- Service or use case: `CodeDeploy`
-- Select **CodeDeploy - ECS**
-- Click **Next**
-
-![3.31](/images/2-preparation/3.31.png)
-
-- Click **Next**
-
-![3.32](/images/2-preparation/3.32.png)
-
-- Role name: `CodeDeployServiceRole`
-
-![3.33](/images/2-preparation/3.33.png)
-
-- Click **Create role**
+![3.27](/images/2-preparation/3.27.png)
