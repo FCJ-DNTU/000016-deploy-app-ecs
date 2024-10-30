@@ -21,17 +21,28 @@ Cấu hình Security Group:
 - Description: `Allow access for Internet`
 - Chọn VPC vừa tạo
 
-Cấu hình Inbound rules:
+Cấu hình Inbound rules, tạo inbound một cái trỏ đến public security group, một cái trỏ vào chính private security group:
 
 - Chọn **All traffic**
 - Source: **FCJ-Lab-sg-public**
 
+- Tạo thêm một inbound
+
 ![3.23](/images/2-preparation/3.23.png)
+
+Tương tự cấu hình thêm cho cổng private security group
+
+- Chọn **All traffic**
+- Destination: **Anywhere IPv4**
+- Source: **FCJ-Lab-sg-private**
+
+![3.23](/images/2-preparation/3.23.1.png)
 
 Cấu hình Outbound rules:
 
 - Chọn **All traffic**
 - Destination: **Anywhere IPv4**
+- Source: **FCJ-Lab-sg-public**
 
 ![3.24](/images/2-preparation/3.24.png)
 
