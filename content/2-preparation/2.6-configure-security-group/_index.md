@@ -28,6 +28,14 @@ Configure Inbound rules:
 
 ![3.23](/images/2-preparation/3.23.png)
 
+Tương tự cấu hình bổ sung cho nhóm bảo mật cổng riêng
+
+- Chọn **All trafic**
+- Sources: **Anywhere IPv4**
+- Source: **FCJ-Lab-sg-private**
+
+![3.23](/images/2-preparation/3.23.1.png)
+
 Configure Outbound rules:
 
 - Select **All traffic**
